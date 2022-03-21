@@ -1,0 +1,436 @@
+{
+    "timeline": {
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<p>192 STOREY STREET</p>",
+                            "css": "p { font-family: \"Manrope ExtraBold\"; color: #f0c20c; font-size: 40px; text-align: left;    line-height: 78; }",
+                            "width": 320,
+                            "height": 200,
+                            "position": "bottom"
+                        },
+                        "start": 1.2,
+                        "length": 4.2,
+                        "position": "left",
+                        "offset": {
+                            "x": 0.05,
+                            "y": 0.3
+                        },
+                        "transition": {
+                            "in": "slideRight",
+                            "out": "slideLeft"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<p>MAROUBRA, NSW 2035</p>",
+                            "css": "p { font-family: \"Manrope Light\"; color: #ffffff; font-size: 22px; text-align: left;    line-height: 78; }",
+                            "width": 320,
+                            "height": 66,
+                            "position": "top"
+                        },
+                        "start": 1.3,
+                        "length": 3.9,
+                        "position": "left",
+                        "offset": {
+                            "x": 0.05,
+                            "y": 0.065
+                        },
+                        "transition": {
+                            "in": "slideRight",
+                            "out": "slideLeft"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<p>AUCTION</p>",
+                            "css": "p { font-family: \"Manrope ExtraBold\"; color: #f0c20c; font-size: 22px; text-align: left;    line-height: 78; }",
+                            "width": 320,
+                            "height": 100,
+                            "position": "top"
+                        },
+                        "start": 1.4,
+                        "length": 4,
+                        "position": "left",
+                        "offset": {
+                            "x": 0.05,
+                            "y": -0.24
+                        },
+                        "transition": {
+                            "in": "slideRight",
+                            "out": "slideLeft"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<p>HOUSE</p>",
+                            "css": "p { font-family: \"Manrope Light\"; color: #ffffff; font-size: 17px; text-align: left;    line-height: 78; }",
+                            "width": 320,
+                            "height": 32,
+                            "position": "center"
+                        },
+                        "start": 1.4,
+                        "length": 4,
+                        "position": "left",
+                        "offset": {
+                            "x": 0.05,
+                            "y": -0.08
+                        },
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        }
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://templates.shotstack.io/basic/asset/image/icon/slimline/white/26px/bed.png"
+                        },
+                        "start": 1.4,
+                        "length": 4,
+                        "fit": "none",
+                        "position": "left",
+                        "offset": {
+                            "x": 0.055,
+                            "y": -0.025
+                        },
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://templates.shotstack.io/basic/asset/image/icon/slimline/white/26px/bath.png"
+                        },
+                        "start": 1.4,
+                        "length": 4,
+                        "fit": "none",
+                        "position": "left",
+                        "offset": {
+                            "x": 0.13,
+                            "y": -0.025
+                        },
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://templates.shotstack.io/basic/asset/image/icon/slimline/white/26px/car.png"
+                        },
+                        "start": 1.4,
+                        "length": 4,
+                        "fit": "none",
+                        "position": "left",
+                        "offset": {
+                            "x": 0.205,
+                            "y": -0.025
+                        },
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<p>4</p>",
+                            "css": "p { font-family: \"Manrope ExtraBold\"; color: #ffffff; font-size: 18px; text-align: left;     }",
+                            "width": 36,
+                            "height": 26,
+                            "position": "center"
+                        },
+                        "start": 1.4,
+                        "length": 4,
+                        "position": "left",
+                        "offset": {
+                            "x": 0.09,
+                            "y": -0.025
+                        },
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<p>2</p>",
+                            "css": "p { font-family: \"Manrope ExtraBold\"; color: #ffffff; font-size: 18px; text-align: left;     }",
+                            "width": 36,
+                            "height": 26,
+                            "position": "center"
+                        },
+                        "start": 1.4,
+                        "length": 4,
+                        "position": "left",
+                        "offset": {
+                            "x": 0.165,
+                            "y": -0.025
+                        },
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<p>1</p>",
+                            "css": "p { font-family: \"Manrope ExtraBold\"; color: #ffffff; font-size: 18px; text-align: left;     }",
+                            "width": 36,
+                            "height": 26,
+                            "position": "center"
+                        },
+                        "start": 1.4,
+                        "length": 4,
+                        "position": "left",
+                        "offset": {
+                            "x": 0.24,
+                            "y": -0.025
+                        },
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        }
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "luma",
+                            "src": "https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/luma-mattes/circle.jpg"
+                        },
+                        "start": 30,
+                        "length": 6
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/real-estate-agent-male.jpg"
+                        },
+                        "start": 30,
+                        "length": 6,
+                        "fit": "none",
+                        "scale": 0.4,
+                        "offset": {
+                            "x": 0,
+                            "y": 0.22
+                        },
+                        "transition": {
+                            "in": "fade"
+                        }
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<p>JEREMY SIMPSON</p>",
+                            "css": "p { font-family: \"Manrope ExtraBold\"; color: #f0c20c; font-size: 26px; text-align: center;     }",
+                            "width": 600,
+                            "height": 36,
+                            "position": "center"
+                        },
+                        "start": 30,
+                        "length": 6,
+                        "offset": {
+                            "x": 0,
+                            "y": 0.045
+                        },
+                        "transition": {
+                            "in": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<p>0424 998 776<br>jeremy@blockrealestate.co</p>",
+                            "css": "p { font-family: \"Manrope Light\"; color: #ffffff; font-size: 18px; text-align: center;     }",
+                            "width": 600,
+                            "height": 64,
+                            "position": "center"
+                        },
+                        "start": 30,
+                        "length": 6,
+                        "offset": {
+                            "x": 0,
+                            "y": -0.24
+                        },
+                        "transition": {
+                            "in": "fade"
+                        }
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/logos/real-estate-white.png"
+                        },
+                        "start": 30,
+                        "length": 6,
+                        "fit": "none",
+                        "scale": 0.26,
+                        "offset": {
+                            "x": 0,
+                            "y": -0.08
+                        },
+                        "transition": {
+                            "in": "fade"
+                        }
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://templates.shotstack.io/basic/asset/video/overlay/arrow-sharp/black/content-left-in.mov"
+                        },
+                        "start": 0,
+                        "length": 4.48
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://templates.shotstack.io/basic/asset/video/overlay/arrow-sharp/black/content-left-out.mov"
+                        },
+                        "start": 4.52,
+                        "length": 2
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://templates.shotstack.io/basic/asset/video/overlay/arrow-sharp/black/transition-right.mov"
+                        },
+                        "start": 10.56,
+                        "length": 3
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://templates.shotstack.io/basic/asset/video/overlay/arrow-sharp/black/transition-up.mov"
+                        },
+                        "start": 16.56,
+                        "length": 3
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://templates.shotstack.io/basic/asset/video/overlay/arrow-sharp/black/transition-left.mov"
+                        },
+                        "start": 22.56,
+                        "length": 3
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://templates.shotstack.io/basic/asset/video/overlay/arrow-sharp/black/outro-in.mov"
+                        },
+                        "start": 29,
+                        "length": 7
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/images/realestate1.jpg"
+                        },
+                        "start": 0,
+                        "length": 6,
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/images/realestate2.jpg"
+                        },
+                        "start": 6,
+                        "length": 6,
+                        "effect": "slideLeftSlow"
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/images/realestate3.jpg"
+                        },
+                        "start": 12,
+                        "length": 6,
+                        "effect": "slideRightSlow"
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/images/realestate4.jpg"
+                        },
+                        "start": 18,
+                        "length": 6,
+                        "effect": "slideUpSlow"
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/images/realestate5.jpg"
+                        },
+                        "start": 24,
+                        "length": 6,
+                        "effect": "slideLeftSlow"
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/images/realestate1.jpg"
+                        },
+                        "start": 30,
+                        "length": 6,
+                        "effect": "zoomInSlow"
+                    }
+                ]
+            }
+        ],
+        "fonts": [
+            {
+                "src": "https://templates.shotstack.io/basic/asset/font/manrope-extrabold.ttf"
+            },
+            {
+                "src": "https://templates.shotstack.io/basic/asset/font/manrope-light.ttf"
+            }
+        ],
+        "soundtrack": {
+            "src": "https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/music/unminus/ambisax.mp3",
+            "effect": "fadeOut"
+        }
+    },
+    "output": {
+        "format": "mp4",
+        "resolution": "sd"
+    }
+}

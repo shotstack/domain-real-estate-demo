@@ -1,0 +1,14 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# Environment variables
+.env
+
+# Other
+yarn.lock
+package-lock.json
+.DS_Store
