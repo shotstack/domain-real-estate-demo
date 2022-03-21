@@ -1,0 +1,72 @@
+require('dotenv').config();
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+const shotstack = require('./handler/shotstack/lib/shotstack');
+const domain = require('./handler/domain/lib/domain');
+const responseHandler = require('./shared/response');
+const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname + '../../../web')));
+
+app.post('/demo/shotstack', async (req, res) => {
+    try {
+        const json = await shotstack.createJson(req.body);
+        const render = await shotstack.submit(json);
+
+        res.header("Access-Control-Allow-Origin", "*");
+        res.status(201);
+        res.send(responseHandler.getBody('success', 'OK', render));
+    } catch (err) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.status(400);
+        res.send(responseHandler.getBody('fail', 'Bad Request', err));
+    }
+});
+
+app.get('/demo/shotstack/:renderId', async (req, res) => {
+    try {
+        const render = await shotstack.status(req.params.renderId);
+
+        res.header("Access-Control-Allow-Origin", "*");
+        res.status(200);
+        res.send(responseHandler.getBody('success', 'OK', render));
+    } catch (err) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.status(400);
+        res.send(responseHandler.getBody('fail', 'Bad Request', err));
+    }
+});
+
+app.get('/demo/domain/search/:search', async (req, res) => {
+    try {
+        const properties = await domain.search(req.params.search);
+
+        res.header("Access-Control-Allow-Origin", "*");
+        res.status(200);
+        res.send(responseHandler.getBody('success', 'OK', properties));
+    } catch (err) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.status(400);
+        res.send(responseHandler.getBody('fail', 'Bad request', err));
+    }
+});
+
+app.get('/demo/domain/property/:id', async (req, res) => {
+    try {
+        const property = await domain.property(req.params.id);
+
+        res.header("Access-Control-Allow-Origin", "*");
+        res.status(200);
+        res.send(responseHandler.getBody('success', 'OK', property));
+    } catch (err) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.status(400);
+        res.send(responseHandler.getBody('fail', 'Bad request', err));
+    }
+});
+
+app.listen(3000, () => console.log("Server running...\n\nOpen http://localhost:3000 in your browser\n"));
