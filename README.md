@@ -9,7 +9,7 @@ and Luma matte transitions are used to create more engaging video effects. The
 final video is created by the Shotstack API using images returned by the Domain
 search.
 
-View the live demo at: https://shotstack.io/demo/domain-real-estate-demo
+View the live demo at: https://shotstack.io/demo/domain-real-estate-api/
 
 The demo is built using Node JS and can be used with either Express Framework or deployed 
 as a serverless projects using AWS Lambda and API Gateway.
@@ -26,7 +26,7 @@ The project is divided in to a two components:
 
 #### Backend API
 
-The backend API with an endpoint which searches the Pexels API, prepares the edit and posts 
+The backend API with an endpoint which searches the Domain API, prepares the edit and posts 
 the data to the Shotstack API. A status endpoint is also available which can be polled to 
 return the status of the video as it renders.
 
