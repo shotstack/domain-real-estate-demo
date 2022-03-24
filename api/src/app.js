@@ -4,7 +4,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const shotstack = require('./handler/shotstack/lib/shotstack');
-const domain = require('./handler/domain/lib/domain');
+const properties = require('./handler/shotstack/lib/properties');
+const address = require('./handler/domain/lib/address');
 const responseHandler = require('./shared/response');
 const app = express();
 
@@ -14,7 +15,8 @@ app.use(express.static(path.join(__dirname + '../../../web')));
 
 app.post('/demo/shotstack', async (req, res) => {
     try {
-        const json = await shotstack.createJson(req.body);
+        const property = await properties.get(req.body.propertyId);
+        const json = await shotstack.createJson(property);
         const render = await shotstack.submit(json);
 
         res.header("Access-Control-Allow-Origin", "*");
@@ -43,25 +45,11 @@ app.get('/demo/shotstack/:renderId', async (req, res) => {
 
 app.get('/demo/domain/search/:search', async (req, res) => {
     try {
-        const properties = await domain.search(req.params.search);
+        const properties = await address.search(req.params.search);
 
         res.header("Access-Control-Allow-Origin", "*");
         res.status(200);
         res.send(responseHandler.getBody('success', 'OK', properties));
-    } catch (err) {
-        res.header("Access-Control-Allow-Origin", "*");
-        res.status(400);
-        res.send(responseHandler.getBody('fail', 'Bad request', err));
-    }
-});
-
-app.get('/demo/domain/property/:id', async (req, res) => {
-    try {
-        const property = await domain.property(req.params.id);
-
-        res.header("Access-Control-Allow-Origin", "*");
-        res.status(200);
-        res.send(responseHandler.getBody('success', 'OK', property));
     } catch (err) {
         res.header("Access-Control-Allow-Origin", "*");
         res.status(400);

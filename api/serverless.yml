@@ -56,13 +56,3 @@ functions:
           path: domain/search/{search}
           method: get
           cors: true
-  property:
-    handler: src/handler/domain/handler.property
-    description: Demo - Domain property lookup
-    timeout: 10
-    memorySize: 128
-    events:
-      - http:
-          path: domain/property/{id}
-          method: get
-          cors: true

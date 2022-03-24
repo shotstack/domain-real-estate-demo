@@ -2,10 +2,12 @@
 
 const response = require('../../shared/response');
 const shotstack = require('./lib/shotstack');
+const properties = require('./lib/properties');
 
 module.exports.submit = async (event, context, callback) => {
     const data = JSON.parse(event.body);
-    const json = await shotstack.createJson(data);
+    const property = await properties.get(data.propertyId);
+    const json = await shotstack.createJson(property);
 
     await shotstack.submit(json).then((res) => {
         console.log('Success');
