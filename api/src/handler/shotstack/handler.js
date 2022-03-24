@@ -6,8 +6,15 @@ const properties = require('./lib/properties');
 
 module.exports.submit = async (event, context, callback) => {
     const data = JSON.parse(event.body);
-    const property = await properties.get(data.propertyId);
-    const json = await shotstack.createJson(property);
+    let json;
+
+    try {
+        const property = await properties.get(data.propertyId);
+        json = await shotstack.createJson(property);
+    } catch (res) {
+        console.log('Fail: ', res);
+        callback(null, response.format(400, 'fail', 'Bad Request', res));
+    }
 
     await shotstack.submit(json).then((res) => {
         console.log('Success');
