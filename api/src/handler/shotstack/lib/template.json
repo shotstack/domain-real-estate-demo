@@ -228,7 +228,7 @@
                         "start": 30,
                         "length": 6,
                         "fit": "none",
-                        "scale": 0.6,
+                        "scale": 0.4,
                         "offset": {
                             "x": 0,
                             "y": 0.22
@@ -291,7 +291,7 @@
                         "start": 30,
                         "length": 6,
                         "fit": "none",
-                        "scale": 0.5,
+                        "scale": 0.26,
                         "offset": {
                             "x": 0,
                             "y": -0.08
