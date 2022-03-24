@@ -55,14 +55,13 @@ module.exports.createJson = (body) => {
      *
      * @returns {any} - cleaned JSON response
      */
-    const processDomainResponse = (body) => {
-        const adjustedBody = JSON.parse(JSON.stringify(body));
+    const processDomainResponse = (property) => {
         const re = new RegExp(/https:\/\/bucket-api.(domain|commercialrealestate).com.au\/v1/);
 
-        adjustedBody.property.photos = adjustedBody.property.photos
+        property.photos = property.photos
             .filter((photo) => re.test(photo.fullUrl));
 
-        return adjustedBody;
+        return property;
     };
 
     /**
@@ -201,9 +200,9 @@ module.exports.createJson = (body) => {
 
             const jsonParsed = JSON.parse(data);
 
-            updatePropertyTrack(jsonParsed, cleanedBody.property);
-            updateFeaturesTrack(jsonParsed, cleanedBody.property);
-            updatePhotos(jsonParsed, cleanedBody.property);
+            updatePropertyTrack(jsonParsed, cleanedBody);
+            updateFeaturesTrack(jsonParsed, cleanedBody);
+            updatePhotos(jsonParsed, cleanedBody);
 
             return resolve(jsonParsed);
         });

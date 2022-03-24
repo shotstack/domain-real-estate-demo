@@ -136,8 +136,9 @@ function displayError(error) {
 
         if (response.data.isJoi) {
             $.each(response.data.details, function(index, error) {
-                if (error.context.key === 'photos') {
-                  $('#errors').text('This property has no photos.').removeClass('d-hide').addClass('d-block');
+                if (error.context.key === 'id') {
+                    $('.search-group, #search').addClass('text-danger is-invalid');
+                    $('.search-group').append('<div class="d-block invalid-feedback">The property search is invalid</div>').show();
                 }
             });
         } else if (typeof response.data === 'string') {
@@ -189,46 +190,18 @@ function resetVideo() {
 }
 
 /**
- * Retrieve information from Domain for the chosen property.
- */
-function retrieveProperty() {
-    return new Promise((resolve, reject) => {
-        if (chosenPropertyId === '') {
-            return reject('no property chosen');
-        }
-
-        $.get({
-            url: domainEndpoint + '/property/' + chosenPropertyId,
-            dataType: 'json',
-        }, function(response) {
-            if (response.data.message) {
-                return reject({
-                    message: `Couldn't retrieve that property; please try another.`,
-                });
-            }
-
-            return resolve(response.data);
-        }).fail(function(error) {
-            return reject(error);
-        });
-    });
-}
-
-/**
  * Submit the form with data to create a Shotstack edit
  */
 async function submitVideoEdit() {
     $('#submit-video').prop('disabled', true);
 
     try {
-        var property = await retrieveProperty();
-
         $('#instructions').hide();
         $('#status').removeClass('d-none').addClass('d-flex');
         updateStatus('submitted');
 
         var formData = {
-            'property': property,
+            'propertyId': chosenPropertyId,
         };
 
         $.ajax({
