@@ -1,4 +1,4 @@
-var apiUrl = 'http://localhost:3000/demo/'; // 'https://rp4pk3nib8.execute-api.ap-southeast-2.amazonaws.com/demo/';
+var apiUrl = 'http://localhost:3000/demo/'; // 'https://dsgyryplcg.execute-api.ap-southeast-2.amazonaws.com/demo/';
 var apiEndpoint = apiUrl + 'shotstack';
 var domainEndpoint = apiUrl + 'domain';
 var progress = 0;
