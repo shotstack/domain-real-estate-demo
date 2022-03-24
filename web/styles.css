@@ -56,9 +56,15 @@ header {
     border-color: #25d3d0;
 }
 
-.btn-primary:hover, .btn-primary:active {
+.btn-primary:hover, .btn-primary:active,
+.btn-primary.disabled, .btn-primary:disabled {
     background-color: #25d3d0;
     border-color: #25d3d0;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    background-color: #dbdbdb;
+    border-color: #dbdbdb;
 }
 
 a {
@@ -81,5 +87,11 @@ a:hover {
 }
 
 label {
-  font-weight: 600;
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 0.9rem;
 }

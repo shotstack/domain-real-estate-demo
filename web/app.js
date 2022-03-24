@@ -4,7 +4,7 @@ var domainEndpoint = apiUrl + 'domain';
 var progress = 0;
 var progressIncrement = 10;
 var pollIntervalSeconds = 10;
-var unknownError = 'An unknown error has occurred. Dispatching minions...';
+var unknownError = 'An unknown error has occurred.';
 var player;
 
 var maxProperties = 5;
@@ -35,7 +35,7 @@ var niceProperties = [
 ];
 
 var keyUpTimer;
-var keySearchTimeout = 350; // ms
+var keySearchTimeout = 250; // ms
 var chosenPropertyId = '';
 
 /**
@@ -137,8 +137,7 @@ function displayError(error) {
         if (response.data.isJoi) {
             $.each(response.data.details, function(index, error) {
                 if (error.context.key === 'photos') {
-                    $('#search-group label, #search').addClass('text-danger is-invalid');
-                    $('#search-group').append('<div class="d-block invalid-feedback">This property has no photos.</div>').show();
+                  $('#errors').text('This property has no photos.').removeClass('d-hide').addClass('d-block');
                 }
             });
         } else if (typeof response.data === 'string') {
@@ -147,8 +146,7 @@ function displayError(error) {
             $('#errors').text(unknownError).removeClass('d-hide').addClass('d-block');
         }
     } else if (typeof error.message === 'string') {
-        $('#search-group label, #search').addClass('text-danger is-invalid');
-        $('#search-group').append(`<div class="d-block invalid-feedback">${error.message}</div>`).show();
+        $('#errors').text(error.message).removeClass('d-hide').addClass('d-block');
     } else {
         $('#errors').text(unknownError).removeClass('d-hide').addClass('d-block');
     }
@@ -337,7 +335,7 @@ $(document).ready(function() {
         niceProperties
             .map((address) => ({ address, index: Math.random() }))
             .sort((a, b) => a.index - b.index)
-            .map((p) => `<li><a href="#">${p.address}</li>`)
+            .map((property) => `<li><a href="#">${property.address}</li>`)
             .slice(0, maxProperties)
     );
 
